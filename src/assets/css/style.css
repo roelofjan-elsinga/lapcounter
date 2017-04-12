@@ -1,0 +1,75 @@
+html {
+	line-height: 1.2;
+    height: 100%;
+    background: url('../img/banner01.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	font-family: 'Open Sans', sans-serif;
+}
+body {
+    background-color: transparent;
+}
+.content
+{
+	margin-top: 50px;
+    color: #ecf0f1;
+}
+.logo {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 34px;
+    padding-top: 40px;
+}
+.countdown {
+    text-align: center;
+    margin:  50px 0;
+    min-height: 104px;
+}
+.fancy-button {
+    width: 100px;
+    height: 100px;
+    margin: 0px 1%;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 52px;
+    position: relative;
+    font-weight: 700;
+    color: #ecf0f1;
+    border: 2px solid #ecf0f1;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+.fancy-button:disabled {
+    background-color: #e74c3c;
+}
+.fancy-button:hover {
+    background-color: #bdc3c7;
+}
+.fancy-button:hover:disabled {
+    background-color: #c0392b;
+}
+.fancy-button > span {
+	display: block;
+}
+
+.form-control {
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #ecf0f1;
+}
+
+.form-control > option {
+    color: #2c3e50;
+}
+
+.less-wide {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.less-wide-label {
+    margin-left: 25%;
+    margin-right: 25%;
+    color: #ecf0f1;
+}

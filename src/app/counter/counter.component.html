@@ -1,0 +1,41 @@
+<div>
+    <label class="less-wide-label">Units</label>
+    <select name="unit" [(ngModel)]="unit" class="form-control less-wide">
+        <option value="">Pick a unit</option>
+        <option value="km">Metric (km)</option>
+        <option value="mi">Imperial (mi)</option>
+    </select>
+</div>
+<br />
+<div>
+    <label class="less-wide-label">Laps per {{unit}}</label>
+    <input type="number" step="0.1" name="lapsPerUnit" [(ngModel)]="lapsPerUnit" class="form-control less-wide">
+</div>
+
+<div class="countdown row">
+    <div class="fancy-button">
+        {{laps}} <span>Laps</span>
+    </div>
+    <div class="fancy-button">
+        <span *ngIf="laps == 0">0</span>
+        <span *ngIf="laps > 0">{{distanceInMetric()}} km</span>
+        <span>Distance</span>
+    </div>
+    <div class="fancy-button">
+        <span *ngIf="laps == 0">0</span>
+        <span *ngIf="laps > 0">{{distanceInImperial()}} mi</span>
+        <span>Distance</span>
+    </div>
+</div>
+<div class="countdown row">
+    <button class="fancy-button" (click)="increase()" [disabled]="lapsPerUnit == 0">
+        + <span>Lap</span>
+    </button>
+    <button class="fancy-button" (click)="decrease()" [disabled]="lapsPerUnit == 0">
+        - <span>Lap</span>
+    </button>
+    <button class="fancy-button" (click)="reset()" [disabled]="laps == 0">
+        &nbsp;
+        <span>Reset</span>
+    </button>
+</div>
